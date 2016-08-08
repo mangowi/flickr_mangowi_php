@@ -24,8 +24,6 @@
   $sql .= "OFFSET {$pagination->offset()}";
   $photos = Photograph::find_by_sql($sql);
   
-  // Need to add ?page=$page to all links we want to 
-  // maintain the current page (or store $page in $session)
   
 ?>
 
