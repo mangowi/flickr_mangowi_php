@@ -11,13 +11,11 @@
   $total_count = Photograph::count_all();
   
 
-  // Find all photos
-  // use pagination instead
   //$photos = Photograph::find_all();
   
   $pagination = new Pagination($page, $per_page, $total_count);
   
-  // Instead of finding all records, just find the records 
+  //  find the records 
   // for this page
   $sql = "SELECT * FROM photographs ";
   $sql .= "LIMIT {$per_page} ";
